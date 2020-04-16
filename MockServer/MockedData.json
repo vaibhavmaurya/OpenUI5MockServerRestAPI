@@ -1,0 +1,78 @@
+{
+	"service_calls":[
+		{
+			"method":"GET",
+			"path":"Spaces\\?\\$top\\=\\d+&Geometry\\=Polygon&ParentId\\=null",
+			"status":200,
+			"response": {"value":[{"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","Name":"South Asia","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Name":"Nort Asia","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Island","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}}]}
+		},
+		{
+			"method":"GET",
+			"path":"Hierarchies\\/Spaces\\?SpaceId\\=4be2d242-1a15-4d06-a10e-6e996ff22063",
+			"status":200,
+			"response": {"value":[{"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"Children":[{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Country","Description":"Test","ParentSpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Children":[{"SpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Name":"State","Description":"Test","ParentSpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Children":[{"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","Name":"City","Description":"Test","ParentSpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Children":[]}]}]}]}]}
+		},
+		{
+			"method":"GET",
+			"path":"Spaces\\?\\$top\\=\\d+&Geometry\\=Polygon",
+			"status":200,
+			"response": {"value":[{"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","Name":"City","Description":"Test","ParentSpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","GeometryType":{"Name":"Polygon"}},{"SpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Name":"State","Description":"Test","ParentSpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","GeometryType":{"Name":"Polygon"}},{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Country","Description":"Test","ParentSpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","GeometryType":{"Name":"Polygon"}},{"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}}]}
+		},{
+			"method":"GET",
+			"path":"Spaces\\?\\$top\\=\\d+&Geometry\\=Polygon&Name\\=(.*)",
+			"status":200,
+			"response": {"value":[{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Country","Description":"Test","ParentSpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","GeometryType":{"Name":"Polygon"}},{"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}}]}
+		},
+		{
+			"method":"GET",
+			"path":"GeoLocations\\?\\$top\\=\\d+&Geometry\\=Polygon&ParentGeoLocationId\\=null",
+			"status":200,
+			"response": {"value":[{"Type":"Feature","Properties":{"GeoLocationId":"19e656bb-5e8f-4204-912a-1156aff33769","ParentGeoLocationId":null,"ExternalId":null,"SpaceId":"df6fced4-4fd7-4da8-821a-d95d3be56fef","SpaceName":"geofence_space_abbaadcaba","Name":"geofence_1132433222a32ad44aa3dd214c112d33c2b3c312","Descriptions":[{"Locale":"en","Label":"Office"},{"Locale":"de","Label":"Office"}],"Addresses":[{"Locale":"en","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"Bangalore","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Whitefield","CountryCode":"IND","Country":"India","PostalCode":"560066"}},{"Locale":"de","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"Bangalore","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Whitefield","CountryCode":"IND","Country":"India","PostalCode":"560066"}}]},"Geometry":{"type":"Polygon","coordinates":[[[77.61515413038433,13.131169443950057],[77.61517120152712,13.131206072866917],[77.6151138599962,13.131217673420906],[77.61457614041865,13.131861632689834],[77.61515413038433,13.131169443950057]]]}},{"Type":"Feature","Properties":{"GeoLocationId":"14a8ba88-0916-4da5-8436-62dbb43ef0ba","ParentGeoLocationId":null,"ExternalId":"31455add6df24e9aaqge2e6a63188125","SpaceId":"526ecfab-5e23-4b5d-800a-94ff28f3823d","SpaceName":"geofence_space_cdc3c44aad1331d23aca","Name":"SAP LLabs","Descriptions":[{"Locale":"en","Label":"Office"},{"Locale":"de","Label":"Office"}],"Addresses":[{"Locale":"en","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}},{"Locale":"de","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}}]},"Geometry":{"type":"Polygon","coordinates":[[[77.61515413038433,13.131169443950057],[77.61517120152712,13.131206072866917],[77.6151138599962,13.131217673420906],[77.61457614041865,13.131861632689834],[77.61515413038433,13.131169443950057]]]}},{"Type":"Feature","Properties":{"GeoLocationId":"091137da-634a-4a90-922b-5b0599910ccd","ParentGeoLocationId":null,"ExternalId":"31455add6df24e9aadee2e6a63188125","SpaceId":"526ecfab-5e23-4b5d-800a-94ff28f3823d","SpaceName":"geofence_space_cdc3c44aad1331d23aca","Name":"SAP LLLabs","Descriptions":[{"Locale":"en","Label":"Office"},{"Locale":"de","Label":"Office"}],"Addresses":[{"Locale":"en","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}},{"Locale":"de","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}}]},"Geometry":{"type":"Polygon","coordinates":[[[77.61515413038433,13.131169443950057],[77.61517120152712,13.131206072866917],[77.6151138599962,13.131217673420906],[77.61457614041865,13.131861632689834],[77.61515413038433,13.131169443950057]]]}},{"Type":"Feature","Properties":{"GeoLocationId":"08ffd2f9-3f7a-4b50-b146-20fd53468f98","ParentGeoLocationId":"16a8371b-d133-4ea7-ad83-777481daaaec","ExternalId":null,"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","SpaceName":"City","Name":"Bangalore","Descriptions":[{"Locale":"en","Label":"Country"}],"Addresses":[{"Locale":"en","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}},{"Locale":"de","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"EPIP Zone","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Karnataka","CountryCode":"IND","Country":"India","PostalCode":"560066"}}]},"Geometry":{"type":"Polygon","coordinates":[[[77.61515413038433,13.131169443950057],[77.61517120152712,13.131206072866917],[77.6151138599962,13.131217673420906],[77.61457614041865,13.131861632689834],[77.61515413038433,13.131169443950057]]]}}]}
+		},{
+			"method":"GET",
+			"path":"Spaces\\/(.*)",
+			"status":200,
+			"response": {"SpaceId":"df6fced4-4fd7-4da8-821a-d95d3be56fef","Name":"geofence_space_abbaadcaba","Description":"geofence_space_1","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}}
+		},
+		{
+			"method":"GET",
+			"path":"GeoLocations\\?SpaceId\\=(.*)",
+			"status":200,
+			"response": {"value":[{"Type":"Feature","Properties":{"GeoLocationId":"19e656bb-5e8f-4204-912a-1156aff33769","ParentGeoLocationId":null,"ExternalId":null,"SpaceId":"df6fced4-4fd7-4da8-821a-d95d3be56fef","SpaceName":"geofence_space_abbaadcaba","Name":"geofence_1132433222a32ad44aa3dd214c112d33c2b3c312","Descriptions":[{"Locale":"en","Label":"Office"},{"Locale":"de","Label":"Office"}],"Addresses":[{"Locale":"en","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"Bangalore","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Whitefield","CountryCode":"IND","Country":"India","PostalCode":"560066"}},{"Locale":"de","Address":{"House":"138","Street":"Whitefield Road","CityDistrict":"Bangalore","City":"Bangalore","District":"Bangalore","RegionCode":"KA","Region":"Whitefield","CountryCode":"IND","Country":"India","PostalCode":"560066"}}]},"Geometry":{"type":"Polygon","coordinates":[[[77.61515413038433,13.131169443950057],[77.61517120152712,13.131206072866917],[77.6151138599962,13.131217673420906],[77.61457614041865,13.131861632689834],[77.61515413038433,13.131169443950057]]]}}]}
+		},
+		{
+			"method":"POST",
+			"path":"Spaces",
+			"status":201,
+			"response": {"SpaceId":"e030db09-3eb4-467a-aca6-e2a62710445f"}
+		},
+		{
+			"method":"GET",
+			"path":"Hierarchies\\/Spaces\\/65930eb9-f42c-4258-8edb-df4ea418165c",
+			"status":200,
+			"response": {"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"Children":[{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Country","Description":"Test","ParentSpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Children":[{"SpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Name":"State","Description":"Test","ParentSpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Children":[{"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","Name":"City","Description":"Test","ParentSpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Children":[]}]}]}]}
+		},
+		{
+			"method":"PUT",
+			"path":"Spaces\\/65930eb9-f42c-4258-8edb-df4ea418165c",
+			"status":201,
+			"response": {"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c"}
+		},
+		{
+			"method":"PUT",
+			"path":"Spaces\\/4be2d242-1a15-4d06-a10e-6e996ff22063",
+			"status":201,
+			"response": {"value":[{"SpaceId":"9cf7fc23-2af0-4dfb-b080-5a6c22735f4c","Name":"South Asia","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"e030db09-3eb4-467a-aca6-e2a627105a5f","Name":"Nort Asia","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Island","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"65930eb9-f42c-4258-8edb-df4ea418165c","Name":"Continent","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}},{"SpaceId":"4be2d242-1a15-4d06-a10e-6e996ff22063","Name":"Country","Description":"Test","ParentSpaceId":null,"GeometryType":{"Name":"Polygon"}}]}
+		},{
+			"method":"PUT",
+			"path":"Spaces\\/(.*)",
+			"status":204,
+			"response": {"SpaceId":"e030db09-3eb4-467a-aca6-e2a62710445f"}
+		},{
+			"method":"DELETE",
+			"path":"Spaces\\/(.*)",
+			"status":204,
+			"response": {"SpaceId":"e030db09-3eb4-467a-aca6-e2a62710445f"}
+		}
+	]
+}
